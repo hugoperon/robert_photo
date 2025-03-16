@@ -1,23 +1,24 @@
 import Image from "next/image";
+import { getImagePath } from "@/utils/paths";
 
 export default function Portfolio() {
   const categories = [
     {
       title: "Automobiles",
       images: [
-        { src: "/images/auto1.jpg", alt: "Voiture de sport" },
-        { src: "/images/auto2.jpg", alt: "Supercar" },
-        { src: "/images/auto3.jpg", alt: "Voiture de collection" },
-        { src: "/images/auto4.jpg", alt: "Voiture de luxe" },
+        { src: getImagePath("/images/auto1.jpg"), alt: "Voiture de sport" },
+        { src: getImagePath("/images/auto2.jpg"), alt: "Supercar" },
+        { src: getImagePath("/images/auto3.jpg"), alt: "Voiture de collection" },
+        { src: getImagePath("/images/auto4.jpg"), alt: "Voiture de luxe" },
       ]
     },
     {
       title: "Motos",
       images: [
-        { src: "/images/moto1.jpg", alt: "Moto custom" },
-        { src: "/images/moto2.jpg", alt: "Moto de course" },
-        { src: "/images/moto3.jpg", alt: "Moto sportive" },
-        { src: "/images/moto4.jpg", alt: "Moto classique" },
+        { src: getImagePath("/images/moto1.jpg"), alt: "Moto custom" },
+        { src: getImagePath("/images/moto2.jpg"), alt: "Moto de course" },
+        { src: getImagePath("/images/moto3.jpg"), alt: "Moto sportive" },
+        { src: getImagePath("/images/moto4.jpg"), alt: "Moto classique" },
       ]
     }
   ];
@@ -28,7 +29,7 @@ export default function Portfolio() {
       <section className="relative h-[50vh]">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero.jpg"
+            src={getImagePath("/images/hero.jpg")}
             alt="Portfolio automobile"
             fill
             priority
