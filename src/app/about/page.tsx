@@ -1,21 +1,12 @@
 import Image from "next/image";
+import { getImagePath } from "@/utils/paths";
 
 export default function About() {
   const experiences = [
     {
-      year: "2020 - Aujourd'hui",
-      title: "Photographe Indépendant",
-      description: "Spécialisation dans la photographie automobile et moto. Collaboration avec de nombreuses marques et événements prestigieux."
-    },
-    {
-      year: "2018 - 2020",
-      title: "Photographe de Presse",
-      description: "Couverture d'événements automobiles majeurs pour différents magazines spécialisés."
-    },
-    {
-      year: "2015 - 2018",
-      title: "Assistant Photographe",
-      description: "Formation auprès de photographes renommés, spécialisation technique et artistique."
+      year: "2022 - Aujourd'hui",
+      title: "Photographe Automobile & Moto",
+      description: "Spécialisation dans la photographie automobile et moto. Shootings personnalisés et couverture d'événements."
     }
   ];
 
@@ -25,7 +16,7 @@ export default function About() {
       <section className="relative h-[50vh]">
         <div className="absolute inset-0">
           <Image
-            src="/images/auto2.jpg"
+            src={getImagePath("/images/auto2.jpg")}
             alt="À propos"
             fill
             priority
@@ -52,7 +43,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[600px] rounded-lg overflow-hidden">
               <Image
-                src="/images/moto3.jpg"
+                src={getImagePath("/images/moto3.jpg")}
                 alt="Portrait du photographe"
                 fill
                 className="object-cover"
@@ -65,10 +56,10 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  Passionné par l'automobile et la photographie depuis mon plus jeune âge, j'ai naturellement combiné ces deux passions pour en faire mon métier.
+                  Depuis janvier 2022, je me suis lancé dans l'aventure de la photographie automobile et moto, combinant ainsi mes deux passions.
                 </p>
                 <p>
-                  Spécialisé dans la photographie automobile et moto, je m'efforce de capturer l'essence et la personnalité unique de chaque véhicule, en mettant en valeur ses lignes, ses détails et son caractère.
+                  Spécialisé dans la photographie de véhicules, je m'efforce de capturer l'essence et la personnalité unique de chaque auto et moto, en mettant en valeur ses lignes, ses détails et son caractère.
                 </p>
                 <p>
                   Mon approche combine technique précise et créativité artistique pour produire des images qui racontent une histoire et suscitent l'émotion.
@@ -109,16 +100,16 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">500+</div>
-              <div className="text-white">Shootings Réalisés</div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">100+</div>
+              <div className="text-white">Véhicules Photographiés</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">50+</div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">20+</div>
               <div className="text-white">Événements Couverts</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">100%</div>
-              <div className="text-white">Clients Satisfaits</div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">2022</div>
+              <div className="text-white">Année de début</div>
             </div>
           </div>
         </div>
