@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getImagePath } from "@/utils/paths";
+import { getImagePath, getPagePath } from "@/utils/paths";
 
 export default function Home() {
   const galleryImages = [
@@ -34,7 +34,7 @@ export default function Home() {
               Sublimez votre passion à travers mon objectif
             </p>
             <Link
-              href="/contact"
+              href={getPagePath("/contact")}
               className="inline-block bg-blue-500 text-white px-8 py-3 text-lg font-medium hover:bg-blue-600 transition-colors"
             >
               Me contacter
@@ -65,7 +65,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/portfolio"
+              href={getPagePath("/portfolio")}
               className="inline-block border-2 border-blue-400 text-blue-400 px-8 py-3 text-lg font-medium hover:bg-blue-400 hover:text-white transition-colors"
             >
               Voir tout le portfolio
@@ -86,7 +86,7 @@ export default function Home() {
               <p className="text-gray-400 mb-4">
                 Mettez en valeur votre véhicule avec des photos professionnelles.
               </p>
-              <Link href="/services" className="text-blue-400 hover:text-blue-300">
+              <Link href={getPagePath("/services")} className="text-blue-400 hover:text-blue-300">
                 En savoir plus →
               </Link>
             </div>
@@ -95,7 +95,7 @@ export default function Home() {
               <p className="text-gray-400 mb-4">
                 Sublimez votre deux-roues avec des photos qui capturent son caractère.
               </p>
-              <Link href="/services" className="text-blue-400 hover:text-blue-300">
+              <Link href={getPagePath("/services")} className="text-blue-400 hover:text-blue-300">
                 En savoir plus →
               </Link>
             </div>
@@ -104,7 +104,7 @@ export default function Home() {
               <p className="text-gray-400 mb-4">
                 Couverture complète de vos événements automobiles.
               </p>
-              <Link href="/services" className="text-blue-400 hover:text-blue-300">
+              <Link href={getPagePath("/services")} className="text-blue-400 hover:text-blue-300">
                 En savoir plus →
               </Link>
             </div>
@@ -122,7 +122,7 @@ export default function Home() {
             Discutons de votre projet ensemble
           </p>
           <Link
-            href="/contact"
+            href={getPagePath("/contact")}
             className="inline-block bg-blue-500 text-white px-8 py-3 text-lg font-medium hover:bg-blue-600 transition-colors"
           >
             Me contacter
