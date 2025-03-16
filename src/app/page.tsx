@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getImagePath } from "@/utils/paths";
 
 export default function Home() {
   const galleryImages = [
-    { src: "/images/auto1.jpg", alt: "Voiture de sport" },
-    { src: "/images/auto2.jpg", alt: "Supercar" },
-    { src: "/images/moto1.jpg", alt: "Moto custom" },
-    { src: "/images/moto2.jpg", alt: "Moto de course" },
+    { src: getImagePath("/images/auto1.jpg"), alt: "Voiture de sport" },
+    { src: getImagePath("/images/auto2.jpg"), alt: "Supercar" },
+    { src: getImagePath("/images/moto1.jpg"), alt: "Moto custom" },
+    { src: getImagePath("/images/moto2.jpg"), alt: "Moto de course" },
   ];
 
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <section className="relative h-screen">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero.jpg"
+            src={getImagePath("/images/hero.jpg")}
             alt="Photographie automobile"
             fill
             priority
