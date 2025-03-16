@@ -6,7 +6,7 @@ export default function Services() {
     {
       title: "Shooting Automobile",
       description: "Mise en valeur professionnelle de votre véhicule dans des lieux soigneusement sélectionnés. Photos en mouvement, en studio ou en extérieur.",
-      image: getImagePath("/images/auto1.jpg"),
+      image: getImagePath("/images/auto6.jpg"),
       features: [
         "Photos en mouvement",
         "Shooting en studio",
@@ -17,7 +17,7 @@ export default function Services() {
     {
       title: "Shooting Moto",
       description: "Sublimez votre deux-roues avec des photos qui capturent son caractère unique. Idéal pour les customs, café racers et motos de collection.",
-      image: getImagePath("/images/moto2.jpg"),
+      image: getImagePath("/images/moto7.jpg"),
       features: [
         "Photos dynamiques",
         "Shooting statique",
@@ -28,7 +28,7 @@ export default function Services() {
     {
       title: "Événements",
       description: "Couverture complète de vos événements automobiles : courses, rassemblements, salons, concours d'élégance.",
-      image: getImagePath("/images/auto3.jpg"),
+      image: getImagePath("/images/auto8.jpg"),
       features: [
         "Reportage complet",
         "Photos d'action",
@@ -44,7 +44,7 @@ export default function Services() {
       <section className="relative h-[50vh]">
         <div className="absolute inset-0">
           <Image
-            src={getImagePath("/images/auto4.jpg")}
+            src={getImagePath("/images/auto10.jpg")}
             alt="Services photographiques"
             fill
             priority

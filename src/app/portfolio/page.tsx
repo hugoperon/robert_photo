@@ -10,6 +10,12 @@ export default function Portfolio() {
         { src: getImagePath("/images/auto2.jpg"), alt: "Supercar" },
         { src: getImagePath("/images/auto3.jpg"), alt: "Voiture de collection" },
         { src: getImagePath("/images/auto4.jpg"), alt: "Voiture de luxe" },
+        { src: getImagePath("/images/auto5.jpg"), alt: "Voiture classique" },
+        { src: getImagePath("/images/auto6.jpg"), alt: "Voiture de prestige" },
+        { src: getImagePath("/images/auto7.jpg"), alt: "Voiture d'exception" },
+        { src: getImagePath("/images/auto8.jpg"), alt: "Voiture de course" },
+        { src: getImagePath("/images/auto9.jpg"), alt: "Voiture GT" },
+        { src: getImagePath("/images/auto10.jpg"), alt: "Voiture sportive" },
       ]
     },
     {
@@ -19,6 +25,12 @@ export default function Portfolio() {
         { src: getImagePath("/images/moto2.jpg"), alt: "Moto de course" },
         { src: getImagePath("/images/moto3.jpg"), alt: "Moto sportive" },
         { src: getImagePath("/images/moto4.jpg"), alt: "Moto classique" },
+        { src: getImagePath("/images/moto5.jpg"), alt: "Moto café racer" },
+        { src: getImagePath("/images/moto6.jpg"), alt: "Moto roadster" },
+        { src: getImagePath("/images/moto7.jpg"), alt: "Moto vintage" },
+        { src: getImagePath("/images/moto8.jpg"), alt: "Moto de piste" },
+        { src: getImagePath("/images/moto9.jpg"), alt: "Moto naked" },
+        { src: getImagePath("/images/moto10.jpg"), alt: "Moto superbike" },
       ]
     }
   ];
@@ -60,7 +72,7 @@ export default function Portfolio() {
                 {category.title.slice(1)}
               </span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {category.images.map((image, index) => (
                 <div
                   key={index}
