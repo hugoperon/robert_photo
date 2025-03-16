@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { getImagePath } from "@/utils/paths";
+import { getImagePath, getPagePath } from "@/utils/paths";
+import Link from "next/link";
 
 export default function Services() {
   const services = [
@@ -112,12 +113,12 @@ export default function Services() {
           <p className="text-xl text-blue-200 mb-8">
             Chaque projet étant unique, contactez-moi pour obtenir un devis personnalisé
           </p>
-          <a
-            href="/contact"
+          <Link
+            href={getPagePath("/contact")}
             className="inline-block bg-blue-500 text-white px-8 py-3 text-lg font-medium hover:bg-blue-600 transition-colors"
           >
             Demander un devis
-          </a>
+          </Link>
         </div>
       </section>
     </div>
