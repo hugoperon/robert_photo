@@ -1,18 +1,16 @@
-export const getBasePath = (): string => {
-  // Vérifie si nous sommes déjà sur une URL contenant robert_photo
-  if (typeof window !== 'undefined' && window.location.pathname.includes('/robert_photo')) {
-    return '';
-  }
+const getBasePath = (): string => {
   return process.env.NODE_ENV === 'production' ? '/robert_photo' : '';
 };
 
 export const getImagePath = (path: string): string => {
-  return `${getBasePath()}${path}`;
+  const basePath = getBasePath();
+  // Retire le slash initial du chemin si nécessaire
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${basePath}/${cleanPath}`;
 };
 
 export const getPagePath = (path: string): string => {
-  // Retire le slash initial si on a un basePath
-  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  const basePath = getBasePath();
-  return basePath ? `${basePath}/${cleanPath}` : `/${cleanPath}`;
+  // Pour les chemins de pages, on utilise des chemins relatifs
+  // Next.js s'occupera d'ajouter le basePath automatiquement
+  return path;
 }; 
