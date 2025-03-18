@@ -41,8 +41,8 @@ export default function Contact() {
                 </svg>
                 <div>
                   <h3 className="font-medium text-white text-lg mb-1">Email</h3>
-                  <a href="mailto:Vasiliuroby.06@yahoo.com" className="text-blue-400 hover:text-blue-300 text-lg">
-                    Vasiliuroby.06@yahoo.com
+                  <a href="mailto:vasiliuroby.06@yahoo.com" className="text-blue-400 hover:text-blue-300 text-lg">
+                    vasiliuroby.06@yahoo.com
                   </a>
                 </div>
               </div>
